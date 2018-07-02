@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">Stick Eraser</string>
+	<string name="stickEraseResult_ZERO_INTERSECTION">Select at least one stick</string>
+	<string name="stickEraseResult_OVER_INTERSECTION">You can erase three sticks at most.</string>
+	<string name="stickEraseResut_INTERSECT_ERASED_STICK">You can\'t cross erased sticks.</string>
+	<string name="stickEraseResult_ACROSS_ROW">Sticks must belong to the same row.</string>
+	<string name="stickEraseResult_NOT_NEIGHBOR_STICK">Sticks must be next to each other.</string>
+	<string name="start">start</string>
+	<string-array name="stage">
+		<item >5-row pyramid</item>
+		<item >6-row pyramid</item>
+		<item >7-row pyramid</item>
+		<item >8-row pyramid</item>
+	</string-array>
+
+	<string name="bottomTurn">no</string>
+	<string name="topTurn">yes</string>
+	<string name="vsHuman">2-player battle mode</string>
+	<string name="vsCom_Level1">level 1</string>
+	<string name="vsCom_Level2">level 2</string>
+	<string name="vsCom_Level3">level 3</string>
+	<string name="help">How to play</string>
+	<string name="back">back</string>
+	<string name="rule1">Erase sticks by turn. The loser is the player who erases the last stick.</string>
+	<string name="rule2">On your turn, erase one or two or three stick(s).</string>
+	<string name="rule3">You can\'t skip your turn.</string>
+	<string name="rule4">You can\'t cross erased sticks.</string>
+	<string name="rule5">You can erase sticks only if sticks belongs to the same row.</string>
+	<string name="str_1">1</string>
+	<string name="str_2">2</string>
+	<string name="str_3">3</string>
+	<string name="str_4">4</string>
+	<string name="str_5">5</string>
+	<string name="you">you</string>
+	<string name="youWin">{0} win</string>
+	<string name="newGame">new game</string>
+	<string name="backToStageSelect">back to stage selection</string>
+	<string name="gameEnd">Game End</string>
+	<string name="computer">computer</string>
+	<string name="gameStart">Game Start</string>
+	<string name="choiceTurn">Will you go first?</string>
+	<string name="cancel">cancel</string>
+	<string name="stage">stage</string>
+	<string name="winCount">wins</string>
+	<string name="resetWinCount">reset win count</string><string name="player1Name">player1</string>
+	<string name="player2Name">player2</string>
+	<string name="ERR_MSG_ZERO_LENGTH">input for &quot;{0}&quot;</string>
+	<string name="ERR_MSG_SAME_NAME">make {0}\'s and {1}\'s name different</string>
+	<string name="resetWinCountConfirm">Do you want to reset win count?</string>
+	<string name="ok">OK</string>
+
+
+</resources>

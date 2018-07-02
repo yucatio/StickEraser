@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical"
+		android:background="#FFFFFF" >
+		<ScrollView
+				android:id="@+id/scrollView1"
+				android:layout_width="match_parent"
+				android:layout_height="0dp"
+				android:layout_weight="1" >			<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="vertical">
+
+
+				<ImageView
+						android:id="@+id/imageView1"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_gravity="center_horizontal"
+						android:layout_marginBottom="8dp"
+						android:layout_marginTop="8dp"
+						android:src="@drawable/rule" />
+
+				<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginBottom="8dp"
+						android:layout_marginLeft="16dp"
+						android:layout_marginRight="16dp"
+						android:layout_marginTop="15dp"
+						android:baselineAligned="true" >
+
+						<ImageView
+								android:layout_width="30dp"
+								android:layout_height="30dp"
+								android:layout_gravity="top"
+								android:contentDescription="@string/str_1"
+								android:src="@drawable/number1" />
+
+						<TextView
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:layout_marginLeft="10dp"
+								android:text="@string/rule1"
+								android:textAppearance="?android:attr/textAppearanceMedium"
+								android:textColor="#000000" />
+
+				</LinearLayout>
+
+				<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginBottom="8dp"
+						android:layout_marginLeft="16dp"
+						android:layout_marginRight="16dp"
+						android:layout_marginTop="8dp"
+						android:baselineAligned="false" >
+
+					<ImageView
+							android:layout_width="30dp"
+							android:layout_height="30dp"
+							android:layout_gravity="top"
+							android:contentDescription="@string/str_2"
+							android:src="@drawable/number2" />
+
+						<TextView
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:layout_marginLeft="10dp"
+								android:text="@string/rule2"
+								android:textAppearance="?android:attr/textAppearanceMedium"
+								android:textColor="#000000" />
+
+				</LinearLayout>
+
+				<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginBottom="8dp"
+						android:layout_marginLeft="16dp"
+						android:layout_marginRight="16dp"
+						android:layout_marginTop="8dp" >
+
+					<ImageView
+							android:layout_width="30dp"
+							android:layout_height="30dp"
+							android:layout_gravity="top"
+							android:contentDescription="@string/str_3"
+							android:src="@drawable/number3" />
+
+
+						<TextView
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:layout_marginLeft="10dp"
+								android:text="@string/rule3"
+								android:textAppearance="?android:attr/textAppearanceMedium"
+								android:textColor="#000000" />
+
+				</LinearLayout>
+				<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginBottom="8dp"
+						android:layout_marginLeft="16dp"
+						android:layout_marginRight="16dp"
+						android:layout_marginTop="8dp" >
+
+					<ImageView
+							android:layout_width="30dp"
+							android:layout_height="30dp"
+							android:layout_gravity="top"
+							android:contentDescription="@string/str_4"
+							android:src="@drawable/number4" />
+
+
+						<TextView
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:layout_marginLeft="10dp"
+								android:text="@string/rule4"
+								android:textAppearance="?android:attr/textAppearanceMedium"
+								android:textColor="#000000" />
+
+				</LinearLayout>
+
+				<ImageView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_gravity="center_horizontal"
+						android:src="@drawable/rule4" />
+
+				<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginBottom="8dp"
+						android:layout_marginLeft="16dp"
+						android:layout_marginRight="16dp"
+						android:layout_marginTop="8dp" >
+
+					<ImageView
+							android:layout_width="30dp"
+							android:layout_height="30dp"
+							android:layout_gravity="top"
+							android:contentDescription="@string/str_5"
+							android:src="@drawable/number5" />
+
+
+						<TextView
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:layout_marginLeft="10dp"
+								android:text="@string/rule5"
+								android:textAppearance="?android:attr/textAppearanceMedium"
+								android:textColor="#000000" />
+
+				</LinearLayout>
+				<ImageView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_gravity="center_horizontal"
+						android:src="@drawable/rule5" />
+
+			</LinearLayout>
+		</ScrollView>
+
+		<Button
+				android:id="@+id/back"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_horizontal"
+				android:layout_marginLeft="16dp"
+				android:layout_marginRight="16dp"
+				android:layout_marginTop="10dp"
+				android:text="@string/back" />
+
+</LinearLayout>

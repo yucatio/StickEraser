@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">棒消しゲーム</string>
+	<string name="stickEraseResult_ZERO_INTERSECTION">棒が選択されていません</string>
+	<string name="stickEraseResult_OVER_INTERSECTION">一度に消せる棒は3本までです</string>
+	<string name="stickEraseResut_INTERSECT_ERASED_STICK">すでに消された線は消すことができません</string>
+	<string name="stickEraseResult_ACROSS_ROW">違う段の棒は同時に消すことができません</string>
+	<string name="stickEraseResult_NOT_NEIGHBOR_STICK">隣り合った棒のみ消すことができます</string>
+	<string name="start">スタート</string>
+	<string-array name="stage">
+		<item >5段ピラミッド</item>
+		<item >6段ピラミッド</item>
+		<item >7段ピラミッド</item>
+		<item >8段ピラミッド</item>
+	</string-array>
+	<string name="topTurn">先攻</string>
+	<string name="bottomTurn">後攻</string>
+	<string name="vsHuman">2人対戦</string>
+	<string name="vsCom_Level1">初級</string>
+	<string name="vsCom_Level2">中級</string>
+	<string name="vsCom_Level3">上級</string>
+	<string name="help">ルールと遊び方</string>
+	<string name="back">戻る</string>
+	<string name="rule1">2人のプレイヤーが交互に棒を消していきます。最後に棒を消したプレイヤーが負けです。</string>
+	<string name="rule2">一度に消せる棒は3本までです。</string>
+	<string name="rule3">パスはできません。</string>
+	<string name="rule4">すでに消された棒をまたいで消すことはできません。</string>
+	<string name="rule5">違う段の棒は同時に消せません。</string>
+	<string name="str_1">1</string>
+	<string name="str_2">2</string>
+	<string name="str_3">3</string>
+	<string name="str_4">4</string>
+	<string name="str_5">5</string>
+	<string name="you">あなた</string>
+	<string name="youWin">{0}の勝ち</string>
+	<string name="newGame">新しいゲーム</string>
+	<string name="backToStageSelect">ステージ選択に戻る</string>
+	<string name="gameEnd">ゲーム終了</string>
+	<string name="computer">コンピュータ</string>
+	<string name="gameStart">ゲーム開始</string>
+	<string name="choiceTurn">先攻・後攻を選んでください</string>
+	<string name="cancel">キャンセル</string>
+	<string name="stage">ステージ</string>
+	<string name="winCount">勝利数</string>
+	<string name="resetWinCount">勝利数をリセット</string><string name="player1Name">player1</string>
+	<string name="player2Name">player2</string>
+	<string name="ERR_MSG_ZERO_LENGTH">{0}に1文字以上入力してください</string>
+	<string name="ERR_MSG_SAME_NAME">{0}と{1}は違う名前を入力してください</string>
+	<string name="resetWinCountConfirm">勝利数をリセットしますか？</string>
+	<string name="ok">OK</string>
+
+
+</resources>
