@@ -6,12 +6,14 @@
 		android:orientation="vertical"
 		android:background="#FFFFFF">
 
-		<com.google.ads.AdView android:id="@+id/adView"
+		<com.google.android.gms.ads.AdView
+			xmlns:ads="http://schemas.android.com/apk/res-auto"
+			android:id="@+id/adView"
 			android:layout_width="wrap_content"
 			android:layout_height="50dp"
-			ads:adUnitId="a14faf0d6e097b2"
 			ads:adSize="BANNER"
-			ads:loadAdOnCreate="true"/>
+			ads:adUnitId="ca-app-pub-4201929114261424/6772312990">
+		</com.google.android.gms.ads.AdView>
 		<jp.gr.java_conf.yuka.stickeraser.view.StickView
 				android:id="@+id/stickView"
 				android:layout_width="wrap_content"
