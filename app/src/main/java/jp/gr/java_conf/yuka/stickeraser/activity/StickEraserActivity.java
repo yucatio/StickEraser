@@ -31,6 +31,10 @@ import android.os.Message;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+
 public class StickEraserActivity extends Activity {
 	private static final long COMPUTER_DELAY_MS = 200;
 
@@ -52,6 +56,8 @@ public class StickEraserActivity extends Activity {
 	// 呼び出し中フラグ
 	private boolean called = false;
 
+	private AdView mAdView;
+
 	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -61,6 +67,14 @@ public class StickEraserActivity extends Activity {
 
 		setContentView(R.layout.main);
 
+		// Ad
+		MobileAds.initialize(this,
+				"ca-app-pub-4201929114261424~3818846597");
+		mAdView = (AdView) findViewById(R.id.adView);
+		AdRequest adRequest = new AdRequest.Builder().build();
+		mAdView.loadAd(adRequest);
+
+		// Stage Id
 		Intent stageSelectIntent = getIntent();
 
 		// 盤面サイズ
