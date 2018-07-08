@@ -5,7 +5,7 @@ Stick Eraser is a simple game for android.
 Two players erase sticks by turn. The loser is the player who erases the last stick.
 You can select computer level 1, 2 or3. And can play with your friend.
 
-### Link
+## Link
 * Google Play : [Stick Eraser](https://play.google.com/store/apps/details?id=jp.gr.java_conf.yuka.stickeraser.activity)
 
 ## Development
