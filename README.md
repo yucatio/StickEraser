@@ -10,3 +10,6 @@ You can select computer level 1, 2 or3. And can play with your friend.
 
 ## Development
 Place google-service.json on app/ folder. You can get this file from Firebase.
+
+### Before release
+Replace adUnitId placed in layout/stage_select.xml and stage_select_vs_human.xml to YOUR_AD_UNIT_ID
