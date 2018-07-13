@@ -25,6 +25,10 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+
 public class StageSelectActivity extends Activity {
 	private static final String TAG = "StageSelectActivity";
 
@@ -32,12 +36,21 @@ public class StageSelectActivity extends Activity {
 	private AlertDialog.Builder dlg;
 	private int level;
 
+	private AdView mAdView;
+
 	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
 		setContentView(R.layout.stage_select);
+
+		// Ad
+		MobileAds.initialize(this,
+				"ca-app-pub-4201929114261424~3818846597");
+		mAdView = (AdView) findViewById(R.id.adView);
+		AdRequest adRequest = new AdRequest.Builder().build();
+		mAdView.loadAd(adRequest);
 
 		// Dao
 		gameCountDao = new GameCountDao(this);

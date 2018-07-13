@@ -16,13 +16,26 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+
 public class StageSelectActivityVsHuman extends Activity {
+	private AdView mAdView;
+
 	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
 		setContentView(R.layout.stage_select_vs_human);
+
+		// Ad
+		MobileAds.initialize(this,
+				"ca-app-pub-4201929114261424~3818846597");
+		mAdView = (AdView) findViewById(R.id.adView);
+		AdRequest adRequest = new AdRequest.Builder().build();
+		mAdView.loadAd(adRequest);
 
 		// ListView
 		ListView stageListView = (ListView) findViewById(R.id.stageList);

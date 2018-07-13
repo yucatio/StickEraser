@@ -56,8 +56,6 @@ public class StickEraserActivity extends Activity {
 	// 呼び出し中フラグ
 	private boolean called = false;
 
-	private AdView mAdView;
-
 	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -66,13 +64,6 @@ public class StickEraserActivity extends Activity {
 		Log.v(TAG, "onCreate called.");
 
 		setContentView(R.layout.main);
-
-		// Ad
-		MobileAds.initialize(this,
-				"ca-app-pub-4201929114261424~3818846597");
-		mAdView = (AdView) findViewById(R.id.adView);
-		AdRequest adRequest = new AdRequest.Builder().build();
-		mAdView.loadAd(adRequest);
 
 		// Stage Id
 		Intent stageSelectIntent = getIntent();
