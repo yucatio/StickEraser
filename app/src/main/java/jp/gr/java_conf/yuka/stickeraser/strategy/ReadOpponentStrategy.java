@@ -1,30 +1,28 @@
 package jp.gr.java_conf.yuka.stickeraser.strategy;
 
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
-import java.util.Random;
 
 import jp.gr.java_conf.yuka.stickeraser.manager.StickManager;
 import jp.gr.java_conf.yuka.stickeraser.manager.StickManager.Block;
-import jp.gr.java_conf.yuka.stickeraser.model.ErasePlace;
+
 import android.util.Log;
 
 import static jp.gr.java_conf.yuka.stickeraser.strategy.Tactics.*;
 
 /**
- * 中級用Strategy
+ * 相手の1手先まで読むStrategy
  * @author Yuka
  *
  */
-public class EraseStrategyImpl02 implements EraseStrategy {
+public class ReadOpponentStrategy implements EraseStrategy {
 
-	@Override
+	public ReadOpponentStrategy() {
+	}
+
 	public Block getEraseSticks(StickManager stickManager) {
 		// Block情報
 		List<StickManager.Block> blockList = stickManager.getBlockList();
 
-		// サマリ情報
 		int[] blockSummary = getBlockSummary(blockList);
 
 		// closingできるか
@@ -34,14 +32,22 @@ public class EraseStrategyImpl02 implements EraseStrategy {
 		}
 
 		// 偶数パターンに持ち込めるか
-		block = getBlockOfEvenErasePattern(blockList, blockSummary);
+		block = getBlockOfEvenPattern(blockList, blockSummary);
+		if (block != null) {
+			return block;
+		}
+
+		// 相手がでclosingできない、 偶数パターンに持ち込めない消し方を見つける
+		block = getBlockOfAvoidingOpponentWinPattern(blockList, blockSummary);
 		if (block != null) {
 			return block;
 		}
 
 		// ランダムに線を引く
+		Log.d("getEraseSticks", "no pattern matched.");
 		return getRandomBlock(blockList);
 	}
+
 
 
 

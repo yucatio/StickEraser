@@ -6,7 +6,6 @@ import jp.gr.java_conf.yuka.stickeraser.code.ColorSettings;
 import jp.gr.java_conf.yuka.stickeraser.code.GameState;
 import jp.gr.java_conf.yuka.stickeraser.code.StickEraseResultCode;
 import jp.gr.java_conf.yuka.stickeraser.code.StickEraserConstants;
-import jp.gr.java_conf.yuka.stickeraser.db.GameCountDao;
 import jp.gr.java_conf.yuka.stickeraser.manager.LineManager;
 import jp.gr.java_conf.yuka.stickeraser.manager.PlayerManger;
 import jp.gr.java_conf.yuka.stickeraser.manager.PyramidalStickManager;
@@ -16,9 +15,9 @@ import jp.gr.java_conf.yuka.stickeraser.model.GameInfoModel;
 import jp.gr.java_conf.yuka.stickeraser.model.HumanPlayer;
 import jp.gr.java_conf.yuka.stickeraser.model.Player;
 import jp.gr.java_conf.yuka.stickeraser.model.StickEraseResultModel;
-import jp.gr.java_conf.yuka.stickeraser.strategy.EraseStrategyImpl01;
-import jp.gr.java_conf.yuka.stickeraser.strategy.EraseStrategyImpl02;
-import jp.gr.java_conf.yuka.stickeraser.strategy.EraseStrategyImpl03;
+import jp.gr.java_conf.yuka.stickeraser.strategy.ClosingPatternStrategy;
+import jp.gr.java_conf.yuka.stickeraser.strategy.EvenPatternStrategy;
+import jp.gr.java_conf.yuka.stickeraser.strategy.ReadOpponentStrategy;
 import jp.gr.java_conf.yuka.stickeraser.view.StickView;
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -30,10 +29,6 @@ import android.os.Handler.Callback;
 import android.os.Message;
 import android.util.Log;
 import android.widget.Toast;
-
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.MobileAds;
 
 public class StickEraserActivity extends Activity {
 	private static final long COMPUTER_DELAY_MS = 200;
@@ -104,11 +99,11 @@ public class StickEraserActivity extends Activity {
 		int level = stageSelectIntent.getIntExtra("level", StickEraserConstants.VS_COM_LEVEl_1);
 
 		if (level == StickEraserConstants.VS_COM_LEVEl_1) {
-			player2 = new ComputerPlayer(getString(R.string.computer), ColorSettings.LINE_COLOR_PLAYER2, new EraseStrategyImpl01());
+			player2 = new ComputerPlayer(getString(R.string.computer), ColorSettings.LINE_COLOR_PLAYER2, new ClosingPatternStrategy());
 		} else if (level ==  StickEraserConstants.VS_COM_LEVEl_2) {
-			player2 = new ComputerPlayer(getString(R.string.computer), ColorSettings.LINE_COLOR_PLAYER2, new EraseStrategyImpl02());
+			player2 = new ComputerPlayer(getString(R.string.computer), ColorSettings.LINE_COLOR_PLAYER2, new EvenPatternStrategy());
 		} else if (level ==  StickEraserConstants.VS_COM_LEVEl_3) {
-			player2 = new ComputerPlayer(getString(R.string.computer), ColorSettings.LINE_COLOR_PLAYER2, new EraseStrategyImpl03());
+			player2 = new ComputerPlayer(getString(R.string.computer), ColorSettings.LINE_COLOR_PLAYER2, new ReadOpponentStrategy());
 		} else if (level ==  StickEraserConstants.VS_HUMAN) {
 			String player2Name = stageSelectIntent.getStringExtra("player2Name");
 			if (player2Name == null) {

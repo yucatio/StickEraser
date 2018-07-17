@@ -77,7 +77,7 @@ public class Tactics {
         return getBlock(erasePlace, blockList);
     }
 
-    public static StickManager.Block getBlockOfEvenErasePattern(List<StickManager.Block> blockList, int[] blockSummary) {
+    public static StickManager.Block getBlockOfEvenPattern(List<StickManager.Block> blockList, int[] blockSummary) {
         // 本数が同じブロックが奇数個の、本数
         List<Integer> oddBlocks = getOddBlockList(blockSummary);
 

@@ -13,11 +13,11 @@ import jp.gr.java_conf.yuka.stickeraser.util.ArrayUtil;
 import static jp.gr.java_conf.yuka.stickeraser.strategy.Tactics.*;
 
 /**
- * 初級用Strategy
+ * 1本の塊のみにして勝てるパターンを探索するStrategy
  * @author Yuka
  *
  */
-public class EraseStrategyImpl01 implements EraseStrategy {
+public class ClosingPatternStrategy implements EraseStrategy {
 
 	public Block getEraseSticks(StickManager stickManager) {
 		// Block情報
