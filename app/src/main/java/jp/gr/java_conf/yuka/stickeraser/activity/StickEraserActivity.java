@@ -101,7 +101,7 @@ public class StickEraserActivity extends Activity {
 		Player player1 = new HumanPlayer(player1Name, ColorSettings.LINE_COLOR_PLAYER1);
 		Player player2 = null;
 
-		int level = stageSelectIntent.getIntExtra("level", 0);
+		int level = stageSelectIntent.getIntExtra("level", StickEraserConstants.VS_COM_LEVEl_1);
 
 		if (level == StickEraserConstants.VS_COM_LEVEl_1) {
 			player2 = new ComputerPlayer(getString(R.string.computer), ColorSettings.LINE_COLOR_PLAYER2, new EraseStrategyImpl01());
