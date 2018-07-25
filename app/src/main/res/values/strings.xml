@@ -20,6 +20,7 @@
 	<string name="vsCom_Level1">level 1</string>
 	<string name="vsCom_Level2">level 2</string>
 	<string name="vsCom_Level3">level 3</string>
+	<string name="vsCom_Level4">level 4</string>
 	<string name="help">How to play</string>
 	<string name="back">back</string>
 	<string name="rule1">Erase sticks by turn. The loser is the player who erases the last stick.</string>

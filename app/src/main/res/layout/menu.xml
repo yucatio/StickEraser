@@ -39,6 +39,13 @@
 					android:layout_gravity="center_horizontal" />
 
 			<Button
+					android:id="@+id/vsComLevel4"
+					android:layout_width="120dp"
+					android:layout_height="wrap_content"
+					android:text="@string/vsCom_Level4"
+					android:layout_gravity="center_horizontal" />
+
+			<Button
 					android:id="@+id/vsHuman"
 					android:layout_width="120dp"
 					android:layout_height="wrap_content"

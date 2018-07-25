@@ -7,12 +7,10 @@ public class ColorSettings {
 	public static final int LINE_COLOR_PLAYER1 = Color.BLUE;
 	public static final int LINE_COLOR_PLAYER2 = Color.GREEN;
 
-	public static final int LINE_INACTIVE = Color.LTGRAY;
-
 	public static final int STICK_COLOR_NOT_ERASED  = Color.BLACK;
-	public static final int STICK_COLOR_ERASED      = Color.DKGRAY;
+	public static final int STICK_COLOR_ERASED      = Color.GRAY;
 	public static final int STICK_COLOR_INTERSECTED = Color.RED;
-	public static final int STICK_COLOR_ERASED_INTERSECTED = Color.GRAY;
+	public static final int STICK_COLOR_ERASED_INTERSECTED = 0xff7f6069;
 
 	/**
 	 * 暗くなった色を返す
