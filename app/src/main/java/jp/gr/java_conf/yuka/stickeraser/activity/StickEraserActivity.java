@@ -99,10 +99,12 @@ public class StickEraserActivity extends Activity {
 		int level = stageSelectIntent.getIntExtra("level", StickEraserConstants.VS_COM_LEVEl_1);
 
 		if (level == StickEraserConstants.VS_COM_LEVEl_1) {
-			player2 = new ComputerPlayer(getString(R.string.computer), ColorSettings.LINE_COLOR_PLAYER2, new ClosingPatternStrategy());
+			player2 = new ComputerPlayer(getString(R.string.computer), ColorSettings.LINE_COLOR_PLAYER2, new ClosingPatternStrategy(4));
 		} else if (level ==  StickEraserConstants.VS_COM_LEVEl_2) {
-			player2 = new ComputerPlayer(getString(R.string.computer), ColorSettings.LINE_COLOR_PLAYER2, new EvenPatternStrategy());
+			player2 = new ComputerPlayer(getString(R.string.computer), ColorSettings.LINE_COLOR_PLAYER2, new ClosingPatternStrategy());
 		} else if (level ==  StickEraserConstants.VS_COM_LEVEl_3) {
+			player2 = new ComputerPlayer(getString(R.string.computer), ColorSettings.LINE_COLOR_PLAYER2, new EvenPatternStrategy());
+		} else if (level== StickEraserConstants.VS_COM_LEVEl_4) {
 			player2 = new ComputerPlayer(getString(R.string.computer), ColorSettings.LINE_COLOR_PLAYER2, new ReadOpponentStrategy());
 		} else if (level ==  StickEraserConstants.VS_HUMAN) {
 			String player2Name = stageSelectIntent.getStringExtra("player2Name");

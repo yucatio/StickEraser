@@ -133,6 +133,16 @@ public abstract class StickManager implements LineObserver {
 		return true;
 	}
 
+	public int getNumOfNotErasedSticks() {
+		int count = 0;
+		for (Stick stick : sticks) {
+			if (stick.getStatus() == StickState.NOT_ERASED) {
+				count++;
+			}
+		}
+		return count;
+	}
+
 	public int getSize() {
 		return size;
 	}

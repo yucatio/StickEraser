@@ -13,6 +13,7 @@ public class StickEraserConstants {
 	public static final int VS_COM_LEVEl_1 = 0;
 	public static final int VS_COM_LEVEl_2 = 1;
 	public static final int VS_COM_LEVEl_3 = 2;
+	public static final int VS_COM_LEVEl_4 = 3;
 	public static final int VS_HUMAN = 99;
 
 	public static int getLevelImageId(int level) {
@@ -23,6 +24,8 @@ public class StickEraserConstants {
 			return R.drawable.level_2;
 		case VS_COM_LEVEl_3:
 			return R.drawable.level_3;
+		case VS_COM_LEVEl_4:
+			return R.drawable.level_4;
 		case VS_HUMAN:
 			return R.drawable.vs_human;
 		default:

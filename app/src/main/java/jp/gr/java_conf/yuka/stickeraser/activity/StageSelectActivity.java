@@ -60,7 +60,7 @@ public class StageSelectActivity extends Activity {
 
 		// レベルの表示
 		Intent menuIntent = getIntent();
-		level = menuIntent.getIntExtra("level", 0);
+		level = menuIntent.getIntExtra("level", StickEraserConstants.VS_COM_LEVEl_1);
 
 		// 対応する画像を表示
 		ImageView levelImage = (ImageView) findViewById(R.id.levelImage);
@@ -148,7 +148,7 @@ public class StageSelectActivity extends Activity {
 		super.onResume();
 
 		// ステージ表示
-		refleshStageList();
+		refreshStageList();
 
 	}
 
@@ -175,7 +175,7 @@ public class StageSelectActivity extends Activity {
 						gameCountDao.deleteAll(level);
 
 						// 再表示
-						refleshStageList();
+						refreshStageList();
 
 					}
 			}).setNegativeButton(R.string.cancel,  new DialogInterface.OnClickListener() {
@@ -194,7 +194,7 @@ public class StageSelectActivity extends Activity {
 	/**
 	 * ステージリストを表示します
 	 */
-	private void refleshStageList() {
+	private void refreshStageList() {
 		// ListView
 		ListView stageListView = (ListView) findViewById(R.id.stageList);
 		List<StageListRow> stages = new ArrayList<StageListRow>();

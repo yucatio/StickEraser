@@ -45,6 +45,16 @@ public class MenuActivity  extends Activity {
 			}
 		});
 
+		// 最上級ボタン
+		Button level4Button = (Button) this.findViewById(R.id.vsComLevel4);
+		level4Button.setOnClickListener(new OnClickListener() {
+			public void onClick(View v) {
+				Intent stageSelectIntent = new Intent(MenuActivity.this, StageSelectActivity.class);
+				stageSelectIntent.putExtra("level", StickEraserConstants.VS_COM_LEVEl_4);
+				startActivity(stageSelectIntent);
+			}
+		});
+
 		// 2人対戦
 		Button vsHumanButton = (Button) this.findViewById(R.id.vsHuman);
 		vsHumanButton.setOnClickListener(new OnClickListener() {

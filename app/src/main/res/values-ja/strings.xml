@@ -19,6 +19,7 @@
 	<string name="vsCom_Level1">初級</string>
 	<string name="vsCom_Level2">中級</string>
 	<string name="vsCom_Level3">上級</string>
+	<string name="vsCom_Level4">最上級</string>
 	<string name="help">ルールと遊び方</string>
 	<string name="back">戻る</string>
 	<string name="rule1">2人のプレイヤーが交互に棒を消していきます。最後に棒を消したプレイヤーが負けです。</string>

@@ -18,18 +18,32 @@ import static jp.gr.java_conf.yuka.stickeraser.strategy.Tactics.*;
  *
  */
 public class ClosingPatternStrategy implements EraseStrategy {
+	private int closingThreshold;
+
+	public ClosingPatternStrategy() {
+		this(Integer.MAX_VALUE);
+	}
+
+	public ClosingPatternStrategy(int closingThreshold) {
+		this.closingThreshold = closingThreshold;
+	}
 
 	public Block getEraseSticks(StickManager stickManager) {
+		// Stick本数
+		int numSticks = stickManager.getNumOfNotErasedSticks();
+
 		// Block情報
 		List<StickManager.Block> blockList = stickManager.getBlockList();
 
 		// サマリ情報
 		int[] blockSummary = getBlockSummary(blockList);
 
-		// closingできるか
-		Block block = getBlockOfClosingErasePattern(blockList, blockSummary);
-		if (block != null) {
-			return block;
+		if (numSticks <= closingThreshold) {
+			// closingできるか
+			Block block = getBlockOfClosingErasePattern(blockList, blockSummary);
+			if (block != null) {
+				return block;
+			}
 		}
 
 		// ランダムに線を引く
