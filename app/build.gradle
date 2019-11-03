@@ -1,15 +1,15 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 24
+    compileSdkVersion 28
     buildToolsVersion "28.0.1"
 
     defaultConfig {
         applicationId "jp.gr.java_conf.yuka.stickeraser.activity"
         minSdkVersion 14
-        targetSdkVersion 24
-        versionCode 7
-        versionName "2.0"
+        targetSdkVersion 28
+        versionCode 8
+        versionName "2.1"
     }
 
     buildTypes {
@@ -21,7 +21,7 @@ android {
 }
 
 dependencies {
-    implementation 'com.google.firebase:firebase-ads:15.0.0'
+    implementation 'com.google.android.gms:play-services-ads:18.2.0'
 }
 
 apply plugin: 'com.google.gms.google-services'
