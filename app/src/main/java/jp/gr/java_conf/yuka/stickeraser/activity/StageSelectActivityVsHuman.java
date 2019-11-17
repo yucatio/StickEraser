@@ -16,9 +16,11 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.MobileAds;
 
 public class StageSelectActivityVsHuman extends Activity {
 	private AdView mAdView;
@@ -31,9 +33,12 @@ public class StageSelectActivityVsHuman extends Activity {
 		setContentView(R.layout.stage_select_vs_human);
 
 		// Ad
-		MobileAds.initialize(this,
-				"ca-app-pub-4201929114261424~3818846597");
-		mAdView = (AdView) findViewById(R.id.adView);
+		MobileAds.initialize(this, new OnInitializationCompleteListener() {
+			@Override
+			public void onInitializationComplete(InitializationStatus initializationStatus) {
+			}
+		});
+		mAdView = findViewById(R.id.adView);
 		AdRequest adRequest = new AdRequest.Builder().build();
 		mAdView.loadAd(adRequest);
 

@@ -45,6 +45,7 @@
 				android:padding="3dp"
 				android:background="@drawable/border_for_ad"
 				ads:adSize="BANNER"
-				ads:adUnitId="ca-app-pub-3940256099942544/6300978111">
+				ads:adUnitId="ca-app-pub-2601595556905046/3334359131">
 		</com.google.android.gms.ads.AdView>
+
 </LinearLayout>
